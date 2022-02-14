@@ -109,7 +109,7 @@ The <span>softlib</span> library is licensed under the MIT License.
 
 
 <table>
-	<tr><td><img src='/img/48x48/read-write-hub.png' alt='Read Write Hub logo' width=48 /></td>	<td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/tasks/softlib.blue'>Read Write Hub</a></td></tr>
+	<tr><td><img src='/img/48x48/read-write-hub.png' alt='Read Write Hub logo' width=48 /></td>	<td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/libs/softlib.blue'>Read Write Hub</a></td></tr>
 	<tr><td><img src='/img/48x48/git.png' alt='git logo' width=48 /></td>	<td>Source code</td> 			<td><a href='https://github.com/readwritetools/softlib'>github</a></td></tr>
 	<tr><td><img src='/img/48x48/npm.png' alt='npm logo' width=48 /></td>	<td>Package installation</td> <td><a href='https://www.npmjs.com/package/softlib'>npm</a></td></tr>
 </table>
