@@ -12,13 +12,13 @@
 
 
 <figure>
-	<img src='/img/libs/safelib/safelib-ono-kosuki-5647228.png' width='100%' />
+	<img src='/img/libs/softlib/softlib-ono-kosuki-5647228.png' width='100%' />
 	<figcaption></figcaption>
 </figure>
 
 ##### Contract by Design
 
-# Safelib
+# Softlib
 
 ## Runtime code safety and sanity checking
 
@@ -30,7 +30,7 @@
 
 <table>
 	<tr><th>Abstract</th></tr>
-	<tr><td>The <span class=product>safelib</span> JavaScript library has functions for type expectations, soft assertions, and logging to the terminal with stack trace.</td></tr>
+	<tr><td>The <span class=product>softlib</span> JavaScript library has functions for type expectations, soft assertions, and logging to the terminal with stack trace.</td></tr>
 </table>
 
 ### Motivation
@@ -68,32 +68,32 @@ The `StackTrace` class provides a stack trace for the other three functions.
 
 ### Prerequisites and installation
 
-The <span>safelib</span> library may be installed directly from github or via
+The <span>softlib</span> library may be installed directly from github or via
 NPM.
 
 To add the library to a node.js project, use this command:
 
 ```bash
-[user@host]# npm install safelib
+[user@host]# npm install softlib
 
-import {expect} from 'safelib';    
-import {aver} from 'safelib';    
-import {terminal} from 'safelib';    
+import {expect} from 'softlib';    
+import {aver} from 'softlib';    
+import {terminal} from 'softlib';    
 ```
 
 To add the library to a browser project, use this command:
 
 ```bash
-[user@host]# git clone https://github.com/readwritetools/safelib.git
+[user@host]# git clone https://github.com/readwritetools/softlib.git
 
-import {expect} from '/safelib/expect.js';    
-import {aver} from '/safelib/aver.js';    
-import {terminal} from '/safelib/terminal.js';    
+import {expect} from '/softlib/expect.js';    
+import {aver} from '/softlib/aver.js';    
+import {terminal} from '/softlib/terminal.js';    
 ```
 
 ### License
 
-The <span>safelib</span> library is licensed under the MIT License.
+The <span>softlib</span> library is licensed under the MIT License.
 
 <img src='/img/blue-seal-mit.png' width=80 align=right />
 
@@ -109,8 +109,8 @@ The <span>safelib</span> library is licensed under the MIT License.
 
 
 <table>
-	<tr><td>Source code</td> 			<td><a href='https://github.com/readwritetools/safelib'>github</a></td></tr>
-	<tr><td>Package installation</td> <td><a href='https://www.npmjs.com/package/safelib'>NPM</a></td></tr>
-	<tr><td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/libs/safelib.blue'>Read Write Hub</a></td></tr>
+	<tr><td><img src='/img/48x48/read-write-hub.png' alt='Read Write Hub logo' width=48 /></td>	<td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/tasks/softlib.blue'>Read Write Hub</a></td></tr>
+	<tr><td><img src='/img/48x48/git.png' alt='git logo' width=48 /></td>	<td>Source code</td> 			<td><a href='https://github.com/readwritetools/softlib'>github</a></td></tr>
+	<tr><td><img src='/img/48x48/npm.png' alt='npm logo' width=48 /></td>	<td>Package installation</td> <td><a href='https://www.npmjs.com/package/softlib'>npm</a></td></tr>
 </table>
 

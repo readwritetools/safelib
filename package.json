@@ -4,10 +4,10 @@
   "description": "Dynamic code for type expectations, soft assertions, and logging to the terminal with stack trace.",
   "author": "Read Write Tools",
   "license": "MIT",
-  "module": "safelib.js",
+  "module": "softlib.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/readwritetools/safelib.git"
+    "url": "https://github.com/readwritetools/softlib.git"
   },
   "keywords": [
     "expect",
@@ -16,9 +16,9 @@
     "stack trace"
   ],
   "bugs": {
-    "url": "https://github.com/readwritetools/safelib/issues"
+    "url": "https://github.com/readwritetools/softlib/issues"
   },
-  "homepage": "https://hub.readwritetools.com/libs/safelib.blue",
+  "homepage": "https://hub.readwritetools.com/libs/softlib.blue",
   "files": [
     "img",
     "license.txt",
