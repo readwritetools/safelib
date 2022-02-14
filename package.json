@@ -1,0 +1,28 @@
+{
+  "name": "safelib",
+  "version": "1.0.0",
+  "description": "Dynamic code for type expectations, soft assertions, and logging to the terminal with stack trace.",
+  "author": "Read Write Tools",
+  "license": "MIT",
+  "module": "safelib.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readwritetools/safelib.git"
+  },
+  "keywords": [
+    "expect",
+    "aver",
+    "terminal",
+    "stack trace"
+  ],
+  "bugs": {
+    "url": "https://github.com/readwritetools/safelib/issues"
+  },
+  "homepage": "https://hub.readwritetools.com/libs/safelib.blue",
+  "files": [
+    "img",
+    "license.txt",
+    "readme.md",
+    "*.js"
+  ]
+}
