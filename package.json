@@ -24,5 +24,15 @@
     "license.txt",
     "readme.md",
     "*.js"
-  ]
+  ],
+  "com_readwritetools": {
+    "modules": {
+      "esmodules": true,
+      "commonjs": false
+    },
+    "suitability": {
+      "nodejs": "api",
+      "browser": "api"
+    }
+  }
 }

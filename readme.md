@@ -39,14 +39,6 @@ Before typescript came on the scene this library was a good way to reliably
 verify that function inputs were in their expected form. It continues to be an
 essential library for software written in pure ECMAScript.
 
-### Suitability
-
-
-<table>
-	<tr><td>Browser</td> 			<td>yes</td></tr>
-	<tr><td>node.js</td> 			<td>yes</td></tr>
-</table>
-
 ### Features
 
 The `expect` function provides runtime type safety without the overhead of a
@@ -66,7 +58,7 @@ via a node.js process, output is routed to stdout or stderr.
 
 The `StackTrace` class provides a stack trace for the other three functions.
 
-### Prerequisites and installation
+### Installation
 
 The <span>softlib</span> library may be installed directly from github or via
 NPM.
@@ -91,7 +83,34 @@ import {aver} from '/softlib/aver.js';
 import {terminal} from '/softlib/terminal.js';    
 ```
 
-### License
+### Metadata
+
+#### Module exports
+
+
+<table>
+	<tr><td>ES modules</td> 		<td>true</td></tr>
+	<tr><td>Common JS</td> 		<td>false</td></tr>
+</table>
+
+#### Suitability
+
+
+<table>
+	<tr><td>Browser</td> 			<td>API</td></tr>
+	<tr><td>node.js</td> 			<td>API</td></tr>
+</table>
+
+#### Availability
+
+
+<table>
+	<tr><td><img src='/img/48x48/read-write-hub.png' alt='Read Write Hub logo' width=48 /></td>	<td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/libs/softlib.blue'>Read Write Hub</a></td></tr>
+	<tr><td><img src='/img/48x48/git.png' alt='git logo' width=48 /></td>	<td>Source code</td> 			<td><a href='https://github.com/readwritetools/softlib'>github</a></td></tr>
+	<tr><td><img src='/img/48x48/npm.png' alt='npm logo' width=48 /></td>	<td>Package installation</td> <td><a href='https://www.npmjs.com/package/softlib'>npm</a></td></tr>
+</table>
+
+#### License
 
 The <span>softlib</span> library is licensed under the MIT License.
 
@@ -104,13 +123,4 @@ The <span>softlib</span> library is licensed under the MIT License.
 	<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 	<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </details>
-
-### Availability
-
-
-<table>
-	<tr><td><img src='/img/48x48/read-write-hub.png' alt='Read Write Hub logo' width=48 /></td>	<td>Documentation</td> 		<td><a href='https://hub.readwritetools.com/libs/softlib.blue'>Read Write Hub</a></td></tr>
-	<tr><td><img src='/img/48x48/git.png' alt='git logo' width=48 /></td>	<td>Source code</td> 			<td><a href='https://github.com/readwritetools/softlib'>github</a></td></tr>
-	<tr><td><img src='/img/48x48/npm.png' alt='npm logo' width=48 /></td>	<td>Package installation</td> <td><a href='https://www.npmjs.com/package/softlib'>npm</a></td></tr>
-</table>
 
