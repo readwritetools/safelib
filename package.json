@@ -4,6 +4,7 @@
   "description": "Dynamic code for type expectations, soft assertions, and logging to the terminal with stack trace.",
   "author": "Read Write Tools",
   "license": "MIT",
+  "type": "module",
   "module": "softlib.js",
   "repository": {
     "type": "git",
@@ -31,8 +32,8 @@
       "commonjs": false
     },
     "suitability": {
-      "nodejs": "api",
-      "browser": "api"
+      "browser": "api",
+      "nodejs": "api"
     }
   }
 }
