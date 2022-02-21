@@ -1,56 +1,56 @@
 /* Copyright (c) 2022 Read Write Tools. */
 export default class terminal {
-    static log(...e) {
-        terminal.stdout(e.join(''));
+    static log(...r) {
+        terminal.stdout(r.join(''));
     }
-    static stdout(e) {
-        terminal.writeToConsoleOrStdout(terminal.getProcessName() + e + '\n');
+    static stdout(r) {
+        terminal.writeToConsoleOrStdout(terminal.getProcessName() + r + '\n');
     }
-    static writeToConsoleOrStdout(e) {
-        if (isBrowser()) console.info(e); else {
-            if (!isNodejs()) throw new Error(e);
-            process.stdout.write(e);
+    static writeToConsoleOrStdout(r) {
+        if (isBrowser()) console.info(r); else {
+            if (!isNodejs()) throw new Error(r);
+            process.stdout.write(r);
         }
     }
-    static trace(...e) {
-        terminal.stderr(gray('   [TRACE] '), e.join(''));
+    static trace(...r) {
+        terminal.stderr(gray('   [TRACE] '), r.join(''));
     }
-    static expect(...e) {
-        terminal.stderr(yellow('  [EXPECT] ') + getFunctionName(4), e.join(''));
+    static expect(...r) {
+        terminal.stderr(yellow('  [EXPECT] ') + getFunctionName(4), r.join(''));
     }
-    static aver(...e) {
-        terminal.stderr(yellow('    [AVER] ') + getFunctionName(4), e.join(''));
+    static aver(...r) {
+        terminal.stderr(yellow('    [AVER] ') + getFunctionName(4), r.join(''));
     }
-    static invalid(...e) {
-        terminal.stderr(yellow(' [INVALID] '), e.join(''));
+    static invalid(...r) {
+        terminal.stderr(yellow(' [INVALID] '), r.join(''));
     }
-    static warning(...e) {
-        terminal.stderr(yellow(' [WARNING] '), e.join(''));
+    static warning(...r) {
+        terminal.stderr(yellow(' [WARNING] '), r.join(''));
     }
-    static error(...e) {
-        terminal.stderr(red('   [ERROR] '), e.join(''));
+    static error(...r) {
+        terminal.stderr(red('   [ERROR] '), r.join(''));
     }
-    static caught(...e) {
-        terminal.stderr(red('  [CAUGHT] ') + getFunctionName(3), e.join(''));
+    static caught(r) {
+        terminal.stderr(red('  [CAUGHT] '), r.stack);
     }
-    static abnormal(...e) {
-        terminal.stderr(red('[ABNORMAL] ') + getFunctionName(3), e.join(''));
+    static abnormal(...r) {
+        terminal.stderr(red('[ABNORMAL] ') + getFunctionName(3), r.join(''));
     }
-    static logic(...e) {
-        terminal.stderr(red('   [LOGIC] ') + getFunctionName(3), e.join(''));
+    static logic(...r) {
+        terminal.stderr(red('   [LOGIC] ') + getFunctionName(3), r.join(''));
     }
-    static stderr(e, r) {
-        terminal.writeToConsoleOrStderr(terminal.getProcessName() + e + r + '\n');
+    static stderr(r, e) {
+        terminal.writeToConsoleOrStderr(terminal.getProcessName() + r + e + '\n');
     }
-    static writeToConsoleOrStderr(e) {
-        if (isBrowser()) console.warn(e); else {
-            if (!isNodejs()) throw new Error(e);
-            process.stderr.write(e);
+    static writeToConsoleOrStderr(r) {
+        if (isBrowser()) console.warn(r); else {
+            if (!isNodejs()) throw new Error(r);
+            process.stderr.write(r);
         }
     }
-    static setProcessName(e) {
+    static setProcessName(r) {
         Object.defineProperty(terminal, 'processName', {
-            value: e,
+            value: r,
             writable: !0
         });
     }
@@ -67,44 +67,44 @@ function isNodejs() {
     return 'object' == typeof process && 'object' == typeof process.stderr && 'function' == typeof process.stderr.write;
 }
 
-function gray(e) {
-    return isBrowser() ? e : `[37m${e}[0m`;
+function gray(r) {
+    return isBrowser() ? r : `[37m${r}[0m`;
 }
 
-function red(e) {
-    return isBrowser() ? e : `[31m${e}[0m`;
+function red(r) {
+    return isBrowser() ? r : `[31m${r}[0m`;
 }
 
-function green(e) {
-    return isBrowser() ? e : `[32m${e}[0m`;
+function green(r) {
+    return isBrowser() ? r : `[32m${r}[0m`;
 }
 
-function yellow(e) {
-    return isBrowser() ? e : `[33m${e}[0m`;
+function yellow(r) {
+    return isBrowser() ? r : `[33m${r}[0m`;
 }
 
-function blue(e) {
-    return isBrowser() ? e : `[34m${e}[0m`;
+function blue(r) {
+    return isBrowser() ? r : `[34m${r}[0m`;
 }
 
-function magenta(e) {
-    return isBrowser() ? e : `[35m${e}[0m`;
+function magenta(r) {
+    return isBrowser() ? r : `[35m${r}[0m`;
 }
 
-function cyan(e) {
-    return isBrowser() ? e : `[36m${e}[0m`;
+function cyan(r) {
+    return isBrowser() ? r : `[36m${r}[0m`;
 }
 
-function white(e) {
-    return isBrowser() ? e : `[37m${e}[0m`;
+function white(r) {
+    return isBrowser() ? r : `[37m${r}[0m`;
 }
 
-function getFunctionName(e) {
-    var r = (new Error).stack.split('\n')[e], t = /at (.*) ?\(/g.exec(r), n = '';
-    return null == t ? r : (t.length > 1 && (n += t[1].trim()), `{${n = rightAlign(n, 30)}} `);
+function getFunctionName(r) {
+    var e = (new Error).stack.split('\n')[r], t = /at (.*) ?\(/g.exec(e), n = '';
+    return null == t ? e : (t.length > 1 && (n += t[1].trim()), `{${n = rightAlign(n, 30)}} `);
 }
 
-function rightAlign(e, r) {
-    var t = r, n = e.length;
-    return n > t ? e.substr(0, t - 3) + '...' : ' '.repeat(t + 1 - n) + e;
+function rightAlign(r, e) {
+    var t = e, n = r.length;
+    return n > t ? r.substr(0, t - 3) + '...' : ' '.repeat(t + 1 - n) + r;
 }
