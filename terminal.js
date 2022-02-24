@@ -19,7 +19,7 @@ export default class terminal {
         terminal.stderr(yellow('  [EXPECT] ') + getFunctionName(4), r.join(''));
     }
     static aver(...r) {
-        terminal.stderr(yellow('    [AVER] ') + getFunctionName(4), r.join(''));
+        terminal.stderr(yellow('    [AVER] '), getStackTraceLine(4));
     }
     static invalid(...r) {
         terminal.stderr(yellow(' [INVALID] '), r.join(''));
@@ -102,6 +102,10 @@ function white(r) {
 function getFunctionName(r) {
     var e = (new Error).stack.split('\n')[r], t = /at (.*) ?\(/g.exec(e), n = '';
     return null == t ? e : (t.length > 1 && (n += t[1].trim()), `{${n = rightAlign(n, 30)}} `);
+}
+
+function getStackTraceLine(r) {
+    return (new Error).stack.split('\n')[r];
 }
 
 function rightAlign(r, e) {
