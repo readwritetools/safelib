@@ -1,13 +1,13 @@
 {
   "name": "softlib",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Dynamic code for type expectations, soft assertions, and logging to the terminal with stack trace.",
   "author": "Read Write Tools",
   "license": "MIT",
   "type": "module",
   "exports": {
-  	".": "./sdk.js",
-  	"./*": "./*"
+    ".": "./sdk.js",
+    "./*": "./*"
   },
   "repository": {
     "type": "git",
