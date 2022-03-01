@@ -5,7 +5,10 @@
   "author": "Read Write Tools",
   "license": "MIT",
   "type": "module",
-  "module": "softlib.js",
+  "exports": {
+  	".": "./sdk.js",
+  	"./*": "./*"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/readwritetools/softlib.git"
