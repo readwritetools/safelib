@@ -110,5 +110,5 @@ function getStackTraceLine(r) {
 
 function rightAlign(r, e) {
     var t = e, n = r.length;
-    return n > t ? r.substr(0, t - 3) + '...' : ' '.repeat(t + 1 - n) + r;
+    return n > t ? r.substr(0, t - 3) + '...' : ' '.repeat(t - n) + r;
 }
