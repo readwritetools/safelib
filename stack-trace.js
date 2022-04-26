@@ -25,10 +25,11 @@ export default class StackTrace {
         t.classname = l[0], l.length > 1 && (t.member = l[1], t.member = t.member.replace(' (eval at evaluate', ''));
         var s = /at .*\((.*)\)/g.exec(a), c = '';
         s.length > 1 && (c = s[1].trim());
-        var i = c.split(':'), m = i[0];
-        i.length > 1 && (t.line = i[1]), i.length > 2 && (t.column = i[2]);
-        var g = m.lastIndexOf('/');
-        return -1 != g ? (t.path = m.substr(0, g), t.filename = m.substr(g + 1)) : t.filename = m, 
+        var i = '', m = c.split(':');
+        4 == m.length ? (i = m[0] + m[1], t.line = m[2], t.column = m[3]) : 3 == m.length ? (i = m[0], 
+        t.line = m[1], t.column = m[2]) : (i = m[0], t.line = m[1]);
+        var g = i.lastIndexOf('/');
+        return -1 != g ? (t.path = i.substr(0, g), t.filename = i.substr(g + 1)) : t.filename = i, 
         t;
     }
 }
