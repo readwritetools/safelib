@@ -56,7 +56,11 @@ The `terminal` function provides context sensitive logging. When reached via a
 browser, output is routed to the console as a warn() or error(). When reached
 via a node.js process, output is routed to stdout or stderr.
 
-The `StackTrace` class provides a stack trace for the other three functions.
+The `vartype` function provides dynamic introspection of a variable's current
+type. It goes beyond ECMAScript's native <code typeof>> and `instanceof` keywords
+by inspecting the name of the variable's constructor.
+
+The `StackTrace` class provides a stack trace for the other functions.
 
 ### Installation
 
@@ -71,6 +75,7 @@ To add the library to a node.js project, use this command:
 import {expect} from 'softlib';    
 import {aver} from 'softlib';    
 import {terminal} from 'softlib';    
+import {vartype} from 'softlib';    
 ```
 
 To add the library to a browser project, use this command:
@@ -81,6 +86,7 @@ To add the library to a browser project, use this command:
 import {expect} from '/softlib/expect.js';    
 import {aver} from '/softlib/aver.js';    
 import {terminal} from '/softlib/terminal.js';    
+import {vartype} from '/softlib/vartype.js';    
 ```
 
 ### Metadata

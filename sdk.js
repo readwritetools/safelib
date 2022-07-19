@@ -7,4 +7,6 @@ import StackTrace from './stack-trace.js';
 
 import terminal from './terminal.js';
 
-export { aver, expect, StackTrace, terminal };
+import vartype from './vartype.js';
+
+export { aver, expect, StackTrace, terminal, vartype };

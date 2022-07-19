@@ -17,7 +17,8 @@
     "expect",
     "aver",
     "terminal",
-    "stack trace"
+    "stack trace",
+    "vartype"
   ],
   "bugs": {
     "url": "https://github.com/readwritetools/softlib/issues"
