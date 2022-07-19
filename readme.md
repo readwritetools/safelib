@@ -57,8 +57,8 @@ browser, output is routed to the console as a warn() or error(). When reached
 via a node.js process, output is routed to stdout or stderr.
 
 The `vartype` function provides dynamic introspection of a variable's current
-type. It goes beyond ECMAScript's native <code typeof>> and `instanceof` keywords
-by inspecting the name of the variable's constructor.
+type. It goes beyond ECMAScript's native `typeof` and `instanceof` keywords by
+inspecting the name of the variable's constructor.
 
 The `StackTrace` class provides a stack trace for the other functions.
 
