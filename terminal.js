@@ -16,7 +16,7 @@ export default class terminal {
         terminal.stderr(gray('   [TRACE] '), r.join(''));
     }
     static expect(...r) {
-        terminal.stderr(yellow('  [EXPECT] ') + getFunctionName(4), r.join(''));
+        terminal.stderr(yellow('  [EXPECT] ') + getFunctionName(5), r.join(''));
     }
     static aver(...r) {
         terminal.stderr(yellow('    [AVER] '), getStackTraceLine(4));
