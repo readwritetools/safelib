@@ -30,8 +30,8 @@ export default class terminal {
     static error(...r) {
         terminal.stderr(red('   [ERROR] '), r.join(''));
     }
-    static caught(r) {
-        terminal.stderr(red('  [CAUGHT] '), r.stack);
+    static caught(...r) {
+        terminal.stderr(red('  [CAUGHT] ') + getFunctionName(3), r.join(''));
     }
     static abnormal(...r) {
         terminal.stderr(red('[ABNORMAL] ') + getFunctionName(3), r.join(''));
